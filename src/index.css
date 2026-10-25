@@ -1,0 +1,460 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@import "@fontsource/playwrite-ar-guides";
+
+:root,
+:root[data-theme="slate"] {
+  color-scheme: light;
+
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fafafa;
+
+  --background: #fafafa;
+  --foreground: #18181b;
+
+  --card: #ffffff;
+  --card-foreground: #18181b;
+
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+
+  --destructive: #dc2626;
+
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #18181b;
+
+  /* Theme-specific variables */
+  --theme-primary: #18181b;
+  --theme-primary-hover: #27272a;
+  --theme-primary-foreground: #ffffff;
+
+  --radius: 0.625rem;
+}
+
+/* Ocean Blue */
+:root[data-theme="blue"] {
+  color-scheme: light;
+
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+
+  --ring: #2563eb;
+
+  --theme-primary: #2563eb;
+  --theme-primary-hover: #1d4ed8;
+  --theme-primary-foreground: #ffffff;
+}
+
+/* Forest Green */
+:root[data-theme="emerald"] {
+  color-scheme: light;
+
+  --primary: #047857;
+  --primary-foreground: #ffffff;
+
+  --ring: #047857;
+
+  --theme-primary: #047857;
+  --theme-primary-hover: #065f46;
+  --theme-primary-foreground: #ffffff;
+}
+
+/* Rose */
+:root[data-theme="rose"] {
+  color-scheme: light;
+
+  --primary: #e11d48;
+  --primary-foreground: #ffffff;
+
+  --ring: #e11d48;
+
+  --theme-primary: #e11d48;
+  --theme-primary-hover: #be123c;
+  --theme-primary-foreground: #ffffff;
+}
+
+/* Shared theme-aware elements */
+.brand-logo {
+  font-family: "Playwrite AR Guides", cursive;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--theme-primary);
+}
+
+.theme-button {
+  background-color: var(--theme-primary);
+  color: var(--theme-primary-foreground);
+  transition: background-color 150ms ease;
+}
+
+.theme-button:hover {
+  background-color: var(--theme-primary-hover);
+}
+
+.theme-focus:focus-visible {
+  border-color: var(--theme-primary);
+  --tw-ring-color: var(--theme-primary);
+}
+
+:root {
+  /* Base colors */
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fafafa;
+
+  /* Zinc colors */
+  --border: #e4e4e7;
+  --background: #fafafa;
+  --foreground: #18181b;
+
+  /* shadcn/ui theme */
+  --card: #ffffff;
+  --card-foreground: #18181b;
+
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+
+  --destructive: #dc2626;
+
+  --input: #e4e4e7;
+  --ring: #e4e4e7;
+
+  --radius: 0.625rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+.brand-logo {
+  font-family: "Playwrite AR Guides", cursive;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.feature-section {
+  background: linear-gradient(
+    to bottom,
+    var(--background, #fff),
+    color-mix(
+      in srgb,
+      var(--theme-primary, #18181b) 3%,
+      var(--background, #fff)
+    ),
+    var(--background, #fff)
+  );
+}
+
+.feature-accent {
+  color: #d4af37;
+}
+
+.feature-soft {
+  background: color-mix(
+    in srgb,
+    var(--theme-primary, #18181b) 9%,
+    var(--background, #fff)
+  );
+}
+
+.feature-border {
+  border-color: color-mix(
+    in srgb,
+    var(--theme-primary, #18181b) 35%,
+    var(--border, #e5e7eb)
+  );
+}
+
+.feature-glow {
+  background: color-mix(
+    in srgb,
+    var(--theme-primary, #18181b) 10%,
+    transparent
+  );
+}
+
+.feature-arrow {
+  stroke: var(--theme-primary, #18181b);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.feature-arrow-path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: feature-draw 1.2s ease-out forwards;
+}
+
+.feature-arrow-path:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.feature-arrow-path:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes feature-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-arrow-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Required Login */
+@keyframes loginFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loginFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loginPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes loginFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.login-header-animation {
+  animation: loginFadeDown 500ms ease-out both;
+}
+
+.login-card-animation {
+  animation: loginFadeUp 600ms 80ms ease-out both;
+}
+
+.login-icon-animation {
+  animation: loginPop 550ms 180ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.login-float-animation {
+  animation: loginFloat 3s ease-in-out infinite;
+}
+
+.login-content-animation {
+  animation: loginFadeUp 500ms 200ms ease-out both;
+}
+
+.login-actions-animation {
+  animation: loginFadeUp 500ms 300ms ease-out both;
+}
+
+.login-primary-button {
+  background-color: var(--login-primary);
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.login-primary-button:hover {
+  background-color: var(--login-hover);
+  box-shadow: 0 6px 18px var(--login-ring);
+  transform: translateY(-1px);
+}
+
+.login-primary-button:active {
+  transform: scale(0.985);
+}
+
+.login-outline-button {
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+.login-outline-button:hover {
+  border-color: var(--login-primary);
+  color: var(--login-text);
+  background-color: var(--login-soft);
+}
+
+.login-help-link,
+.login-logo {
+  transition: color 180ms ease;
+}
+
+.login-help-link:hover,
+.login-logo:hover {
+  color: var(--login-primary);
+}
+
+@media (max-height: 720px) and (min-width: 640px) {
+  .login-main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .login-card {
+    padding: 24px;
+  }
+
+  .login-lock {
+    width: 56px;
+    height: 56px;
+  }
+
+  .login-eyebrow {
+    margin-top: 18px;
+  }
+
+  .login-description {
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .login-security {
+    margin-top: 12px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .login-actions {
+    margin-top: 18px;
+  }
+
+  .login-tagline {
+    margin-top: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-header-animation,
+  .login-card-animation,
+  .login-icon-animation,
+  .login-float-animation,
+  .login-content-animation,
+  .login-actions-animation {
+    animation: none !important;
+  }
+
+  .login-primary-button,
+  .login-outline-button,
+  .login-help-link,
+  .login-logo {
+    transition: none !important;
+  }
+}
