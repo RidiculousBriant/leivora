@@ -4,6 +4,21 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import bagsImage from "@/assets/bags.jpg";
+import hanSoHeeImage from "@/assets/han so hee.jpg";
+import essentialsImage from "@/assets/essentials.jpg";
+import shoesImage from "@/assets/shoes.jpg";
+import watchesImage from "@/assets/watches.jpg";
+import jewelryImage from "@/assets/jewelry.jpg";
+import sunglassesImage from "@/assets/sunglasses.jpg";
+import walletsImage from "@/assets/wallets.jpg";
+import accessoriesImage from "@/assets/accessories.jpg";
+import perfumesImage from "@/assets/perfumes.jpg";
+import jacketsImage from "@/assets/jackets.jpg";
+import hatsImage from "@/assets/hats.jpg";
+import sportswearImage from "@/assets/sportswear.jpg";
+import wangChuranImage from "@/assets/Wang Churan x Gucci.jpg";
+
 import {
   Carousel,
   CarouselContent,
@@ -96,12 +111,13 @@ function getSavedTheme(): ThemeKey {
   return "slate";
 }
 
+
 const slides = [
   {
     eyebrow: "Discover Leivora",
     title: "Luxury That Speaks for Itself",
     description: "Discover timeless elegance and styles made for you.",
-    image: "/src/assets/Wang%20Churan%20x%20Gucci.jpg",
+    image: wangChuranImage,
     alt: "Wang Churan wearing Gucci",
   },
   {
@@ -109,7 +125,7 @@ const slides = [
     title: "Elevate Your Everyday Style",
     description:
       "Explore sophisticated essentials designed to make every moment stylish.",
-    image: "/src/assets/han%20so%20hee.jpg",
+    image: hanSoHeeImage,
     alt: "Leivora new fashion collection",
   },
   {
@@ -117,79 +133,79 @@ const slides = [
     title: "Find Your Signature Look",
     description:
       "Discover carefully selected pieces that express your individuality.",
-    image: "/src/assets/essentials.jpg",
+    image: essentialsImage,
     alt: "Leivora luxury fashion collection",
   },
 ];
 
 const luxurySlides = [
   {
-    image: "/src/assets/bags.jpg",
+    image: bagsImage,
     category: "Bags",
     alt: "Designer bags",
   },
   {
-    image: "/src/assets/han%20so%20hee.jpg",
+    image: hanSoHeeImage,
     category: "Clothing",
     alt: "Fashion clothing",
   },
   {
-    image: "/src/assets/essentials.jpg",
+    image: essentialsImage,
     category: "Streetwear",
     alt: "Streetwear apparel",
   },
   {
-    image: "/src/assets/shoes.jpg",
+    image: shoesImage,
     category: "Shoes",
     alt: "Fashion shoes",
   },
   {
-    image: "/src/assets/watches.jpg",
+    image: watchesImage,
     category: "Watches",
     alt: "Designer watches",
   },
   {
-    image: "/src/assets/jewelry.jpg",
+    image: jewelryImage,
     category: "Jewelry",
     alt: "Fashion jewelry",
   },
   {
-    image: "/src/assets/sunglasses.jpg",
+    image: sunglassesImage,
     category: "Sunglasses",
     alt: "Designer sunglasses",
   },
   {
-    image: "/src/assets/wallets.jpg",
+    image: walletsImage,
     category: "Wallets",
     alt: "Designer wallets",
   },
   {
-    image: "/src/assets/accessories.jpg",
+    image: accessoriesImage,
     category: "Accessories",
     alt: "Fashion accessories",
   },
   {
-    image: "/src/assets/shoes.jpg",
+    image: shoesImage,
     category: "Heels",
     alt: "Women's heels",
   },
   {
-    image: "/src/assets/perfumes.jpg",
+    image: perfumesImage,
     category: "Perfumes",
     alt: "Perfumes",
   },
   {
-    image: "/src/assets/jackets.jpg",
+    image: jacketsImage,
     category: "Jackets",
     alt: "Fashion jackets",
   },
   {
-    image: "/src/assets/hats.jpg",
+    image: hatsImage,
     category: "Hats",
     alt: "Fashion hats",
   },
   {
-    image: "/src/assets/sportswear.jpg",
+    image: sportswearImage,
     category: "Sportswear",
     alt: "Sportswear",
   },

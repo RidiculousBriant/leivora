@@ -1,5 +1,8 @@
 import type { Product } from "@/types/product";
 
+import sunglassesImage from "@/assets/sunglasses.jpg";
+import leatherWatch from "@/assets/watches.jpg";
+
 export const products: Product[] = [
   {
     id: "prod-001",
@@ -26,16 +29,17 @@ export const products: Product[] = [
     stock: 15,
     colors: ["Beige", "Black", "Brown"],
   },
+
   {
     id: "prod-002",
     slug: "classic-sunglasses",
     name: "Classic Sunglasses",
     description: "Modern frames for everyday style.",
     price: 899,
-    image: "src/assets/sunglasses.jpg",
+    image: sunglassesImage,
     colorImages: {
-      Black: "src/assets/sunglasses.jpg",
-      Tortoise: "/images/products/sunglasses-01.jpg",
+      Black: sunglassesImage,
+      Tortoise: sunglassesImage,
     },
     category: "Accessories",
     featured: true,
@@ -55,8 +59,7 @@ export const products: Product[] = [
     colorImages: {
       Black:
         "https://media-makr-com.imgix.net/product/RLXP_Rye_FR_CRD.png?auto=format&q=65&w=1200",
-      Tan:
-        "https://media-makr-com.imgix.net/product/RLXP_Rye_FR_CRD.png?auto=format&q=65&w=1200",
+      Tan: "https://media-makr-com.imgix.net/product/RLXP_Rye_FR_CRD.png?auto=format&q=65&w=1200",
     },
     category: "Accessories",
     featured: false,
@@ -128,11 +131,9 @@ export const products: Product[] = [
     name: "Classic Leather Watch",
     description: "A timeless timepiece with a clean, minimal dial.",
     price: 2199,
-    image:
-      "src/assets/watches.jpg",
+    image: leatherWatch,
     colorImages: {
-      Brown:
-        "src/assets/watches.jpg",
+      Brown: leatherWatch,
       Black:
         "https://ana-made.com/cdn/shop/files/Untitled_design_2_dbc22dd5-ffb6-4690-8ec1-7fe178aebddb.png?v=1751720064",
     },
@@ -155,8 +156,7 @@ export const products: Product[] = [
     colorImages: {
       Cream:
         "https://cafe24img.poxo.com/thomasmore1/web/product/medium/202510/56861c74a127e933fc69dd0daa457aa3.jpg",
-      Gray:
-        "https://cafe24img.poxo.com/thomasmore1/web/product/medium/202510/56861c74a127e933fc69dd0daa457aa3.jpg",
+      Gray: "https://cafe24img.poxo.com/thomasmore1/web/product/medium/202510/56861c74a127e933fc69dd0daa457aa3.jpg",
       Brown:
         "https://cafe24img.poxo.com/thomasmore1/web/product/medium/202510/56861c74a127e933fc69dd0daa457aa3.jpg",
     },
